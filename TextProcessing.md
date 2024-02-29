@@ -1,6 +1,6 @@
 # Text Processing
 
-## Cut #1
+## 1. Cut #1
 ```
 cut -c 3
 ```
@@ -9,127 +9,165 @@ cut -c 3
 cut -b 3
 ```
 
-## Cut #2
+## 2. Cut #2
 ```
 cut -c 2,7
 ```
 
-## Cut #3
+## 3. Cut #3
 ```
 cut -c 2-7
 ```
 
-## Cut #4
+## 4. Cut #4
 ```
 cut -c 1-4
 ```
 
-## Cut #5
+## 5. Cut #5
 ```
 cut -d $'\t' -f 1-3
 ```
 
-## Cut #6
+## 6. Cut #6
 ```
 cut -c 13-
 ```
 
-## Cut #7
+## 7. Cut #7
 ```
 cut -d ' ' -f 3
 ```
 
-## Cut #8
+## 8. Cut #8
 ```
 cut -d " " -f 1-3
 ```
 
-## Cut #9
+## 9. Cut #9
 ```
 cut -d $'\t' -f 2-
 ```
 
-## Head of a Text File #1
+## 10. Head of a Text File #1
 ```
 head -20
 ```
 
-## Head of a Text File #2
+## 11. Head of a Text File #2
 ```
 head -c 20
 ```
 
-## Middle of a Text File
+## 12. Middle of a Text File
 ```
 head -22|tail +12
 ```
 
-## Tail of a Text File #1
+## 13. Tail of a Text File #1
 ```
 tail -20
 ```
 
-## Tail of a Text File #2
+## 14. Tail of a Text File #2
 ```
 tail -c 20
 ```
 
-## 'Tr' Command #1
+## 15. 'Tr' Command #1
 ```
 tr "()" "[]"
 ```
 
-## 'Tr' Command #2
+## 16. 'Tr' Command #2
 ```
 tr -d "[a-z]"
 ```
 
-## 'Tr' Command #3
+## 17. 'Tr' Command #3
 ```
 tr -s " "
 ```
 
-## Sort Command #1
+## 18. Sort Command #1
 ```
 sort
 ```
 
-## Sort Command #2
+## 19. Sort Command #2
 ```
 sort -r
 ```
 
-## Sort Command #3
+## 20. Sort Command #3
 ```
 sort -n
 ```
 
-## Sort Command #4
+## 21. Sort Command #4
 ```
 sort -rn
 ```
 
-## Sort Command #5
+## 22. Sort Command #5
 ```
 sort -t $'\t' -rnk 2
 ```
 
-## Sort Command #6
+## 23. Sort Command #6
 ```
 sort -t $'\t' -nk 2
 ```
 
-## Sort Command #7
+## 24. Sort Command #7
 ```
 sort -t '|' -rnk 2
 ```
 
-## 'Uniq' Command #1
+## 25. 'Uniq' Command #1
 ```
 uniq
 ```
 
-## 'Uniq' Command #2
+## 26. 'Uniq' Command #2
 ```
 uniq -c | sed -e s/^[[:space:]]*/""/
+```
+> OR
+```
+uniq -c | cut -c 7-
+```
+
+## 27. 'Uniq' Command #3
+```
+uniq -ic | sed -e s/^[[:space:]]*/""/
+```
+> OR
+```
+uniq -ic | cut -c 7-
+```
+
+## 28. 'Uniq' command #4
+```
+uniq -u
+```
+
+## 29. Paste - 1
+```
+paste -s -d ";"
+```
+
+## 30. Paste - 2
+```
+paste - - - -d ";"
+```
+
+## 31. Paste - 3
+```
+paste -s -d $'\t'
+```
+
+## 32. Paste - 4
+```
+paste - - - -d $'\t'
 ```
